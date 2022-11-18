@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 13:58:15 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/17 16:02:06 by repinat          ###   ########.fr       */
+/*   Updated: 2022/11/18 15:28:45 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,21 @@
 
 class   Zombie
 {
-	Zombie(std::string set_name)
-	{
-		name = set_name;
-	}
-	
-	Zombie *newZombie(std::string name);
 	
 	public :
+	
+	Zombie(std::string set_name);
+	~Zombie(void);
+	
 
-	void	announce(void)
-	{
-		std::cout << name << " : BraiiiiiiinnnzzzZ..." << std::endl;
-	}
+	void	announce(void);
 
 	private :
 
 	std::string	name;
 };
+
+Zombie  *newZombie(std::string name);
+void	randomChump(std::string name);
 
 #endif
