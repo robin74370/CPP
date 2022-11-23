@@ -6,14 +6,18 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 18:26:37 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/18 18:30:00 by repinat          ###   ########.fr       */
+/*   Updated: 2022/11/23 16:36:28 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WEAPON_HPP
 # define WEAPON_HPP
 
-class	Weapon
+#include <iostream>
+#include "HumanB.hpp"
+#include "HumanA.hpp"
+
+class	Weapon : public HumanA
 {
 	public :
 
@@ -22,7 +26,7 @@ class	Weapon
 
 	private :
 
-		std::string type;
+	std::string type;
 };
 
 

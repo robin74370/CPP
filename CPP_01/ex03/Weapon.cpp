@@ -6,18 +6,19 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 18:30:09 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/18 18:30:31 by repinat          ###   ########.fr       */
+/*   Updated: 2022/11/23 16:16:05 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.h"
+#include "Weapon.hpp"
 
-std::string	&getType()
+std::string	Weapon::&getType()
 {
-	
+	std::string	&ref = this->type;
+	return (ref);
 }
 
-void	setType(std::string str)
+void	Weapon::setType(std::string str)
 {
-	
+	this->type = str;
 }
