@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 18:26:37 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/23 16:36:28 by repinat          ###   ########.fr       */
+/*   Updated: 2022/11/28 14:33:21 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,25 @@
 # define WEAPON_HPP
 
 #include <iostream>
-#include "HumanB.hpp"
-#include "HumanA.hpp"
 
-class	Weapon : public HumanA
+class	Weapon
 {
-	public :
+public :
 
-	std::string	&getType();
-	void	setType(std::string str);
+	//constructeur
+	Weapon(std::string type);
+	//destructeur
+	~Weapon(void);
 
-	private :
+	//getter
+	std::string	&getType(void);
+	
+	//setter
+	void	setType(std::string type);
 
-	std::string type;
+private :
+
+	std::string _type;
 };
 
 

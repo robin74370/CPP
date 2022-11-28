@@ -6,27 +6,31 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:10:08 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/23 16:34:04 by repinat          ###   ########.fr       */
+/*   Updated: 2022/11/28 15:00:41 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
 #include <iostream>
+#include "Weapon.hpp"
 
 class HumanA
 {
 public :
-		
-	HumanA(std::string weapon);
+	
+	//constructeur
+	HumanA(std::string name, Weapon &weapon);
+	//destructeur
 	~HumanA(void);
 
 	void	attack();
 
 private :
 
-	std::string	name;
+	std::string	_name;
+	Weapon &_weapon;
 
 };
 
