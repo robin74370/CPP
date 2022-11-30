@@ -42,5 +42,6 @@
 		"sstream": "cpp",
 		"tuple": "cpp",
 		"utility": "cpp"
-	}
+	},
+	"C_Cpp.errorSquiggles": "Enabled"
 }
