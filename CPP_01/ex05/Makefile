@@ -1,15 +1,14 @@
-SRCS =		phonebook.cpp\
+SRCS =		main.cpp\
+			Harl.cpp\
 
 OBJS =		${SRCS:.cpp=.o}
 
-HEADER =	phonebook.hpp
-
-NAME =		Phonebook
+NAME =		Harl
 
 CFLAGS = 	-Wall -Wextra -Werror
 
 .c.o	:
-			g++ $(FLAGS) -c $< -o $@
+			clang++ $(FLAGS) -c $< -o $@
 
 all	:		$(NAME)
 

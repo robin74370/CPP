@@ -1,41 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/23 15:10:03 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/29 17:44:12 by repinat          ###   ########.fr       */
+/*   Created: 2022/11/29 23:33:02 by repinat           #+#    #+#             */
+/*   Updated: 2022/11/29 23:45:20 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-# define HUMANB_HPP
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
 #include <iostream>
-#include "Weapon.hpp"
+#include <cmath>
 
-class HumanB
+class Fixed
 {
 public :
-		
-	//constructeur
-	HumanB(std::string name);
-	//destructeur
-	~HumanB(void);
 
-	//setter
-	void	setWeapon(Weapon &weapon);
+	//constructeur par default
+	Fixed(void);
+	//constructeur de recopie
+	Fixed(Fixed const &src);
+	Fixed(int const _int);
+	Fixed(float const _float);
 	
-	void	attack() const;
-
-private :
-
-	std::string	_name;
-	Weapon *_weapon;
+	~Fixed(void);
 	
+	Fixed	&operator=(Fixed const &_src);
+	int		getRawBits(void) const;
+	void	setRawBits(int const raw);
+
+	
+
+private:
+
+	int	_fixed;
+	static int	_bits;
+
 };
-
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:15:19 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/28 15:11:30 by repinat          ###   ########.fr       */
+/*   Updated: 2022/11/29 17:44:06 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	HumanB::setWeapon(Weapon &weapon)
 	this->_weapon = &weapon;
 }
 
-void	HumanB::attack(void)
+void	HumanB::attack(void) const
 {
 	std::cout << this->_name << " attacks with their ";
 	if (this->_weapon)

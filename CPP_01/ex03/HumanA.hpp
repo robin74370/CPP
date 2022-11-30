@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:10:08 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/28 15:00:41 by repinat          ###   ########.fr       */
+/*   Updated: 2022/11/29 17:44:17 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ public :
 	//destructeur
 	~HumanA(void);
 
-	void	attack();
+	void	attack() const;
 
 private :
 

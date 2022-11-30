@@ -1,41 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/23 15:10:03 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/29 17:44:12 by repinat          ###   ########.fr       */
+/*   Created: 2022/11/29 17:47:07 by repinat           #+#    #+#             */
+/*   Updated: 2022/11/29 23:25:43 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-# define HUMANB_HPP
+#include "Fixed.hpp"
 
-#include <iostream>
-#include "Weapon.hpp"
-
-class HumanB
+int	main()
 {
-public :
-		
-	//constructeur
-	HumanB(std::string name);
-	//destructeur
-	~HumanB(void);
-
-	//setter
-	void	setWeapon(Weapon &weapon);
+	Fixed a;
+	Fixed b( a );
+	Fixed c;
 	
-	void	attack() const;
-
-private :
-
-	std::string	_name;
-	Weapon *_weapon;
+	c = b;
 	
-};
-
-
-#endif
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
+	
+	return 0;
+}

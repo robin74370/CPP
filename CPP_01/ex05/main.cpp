@@ -1,41 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/23 15:10:03 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/29 17:44:12 by repinat          ###   ########.fr       */
+/*   Created: 2022/11/29 11:09:51 by repinat           #+#    #+#             */
+/*   Updated: 2022/11/29 11:29:32 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-# define HUMANB_HPP
+#include "Harl.hpp"
 
-#include <iostream>
-#include "Weapon.hpp"
-
-class HumanB
+int main()
 {
-public :
-		
-	//constructeur
-	HumanB(std::string name);
-	//destructeur
-	~HumanB(void);
+	Harl	demo;
 
-	//setter
-	void	setWeapon(Weapon &weapon);
-	
-	void	attack() const;
-
-private :
-
-	std::string	_name;
-	Weapon *_weapon;
-	
-};
-
-
-#endif
+	demo.complain("DEBUG");
+	demo.complain("INFO");
+	demo.complain("WARNING");
+	demo.complain("ERROR");
+}

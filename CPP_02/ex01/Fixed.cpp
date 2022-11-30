@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/23 15:10:03 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/29 17:44:12 by repinat          ###   ########.fr       */
+/*   Created: 2022/11/29 23:33:04 by repinat           #+#    #+#             */
+/*   Updated: 2022/11/30 00:19:51 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-# define HUMANB_HPP
+#include "Fixed.hpp"
 
-#include <iostream>
-#include "Weapon.hpp"
+int Fixed::_bits = 8;
 
-class HumanB
+//constructeur par defaut
+Fixed::Fixed(void) : _fixed(0)
 {
-public :
-		
-	//constructeur
-	HumanB(std::string name);
-	//destructeur
-	~HumanB(void);
-
-	//setter
-	void	setWeapon(Weapon &weapon);
+	std::cout << "Defaut constructor called" << std::endl;
+}
+//constructeur de recopie
+Fixed::Fixed(Fixed const &src)
+{
+	std::cout << "Copy constructor called" << std::endl;
 	
-	void	attack() const;
+	*this = src;
 
-private :
+	return ;
+}
 
-	std::string	_name;
-	Weapon *_weapon;
+Fixed::Fixed(int const _int)
+{
 	
-};
-
-
-#endif
+}

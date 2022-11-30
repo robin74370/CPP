@@ -1,41 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/23 15:10:03 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/29 17:44:12 by repinat          ###   ########.fr       */
+/*   Created: 2022/11/30 00:23:49 by repinat           #+#    #+#             */
+/*   Updated: 2022/11/30 01:08:18 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-# define HUMANB_HPP
+#include "ClapTrap.hpp"
 
-#include <iostream>
-#include "Weapon.hpp"
-
-class HumanB
+int main()
 {
-public :
-		
-	//constructeur
-	HumanB(std::string name);
-	//destructeur
-	~HumanB(void);
+	ClapTrap test("bonhomme");
+	std::string	str;
+	std::string	&looser = str;
 
-	//setter
-	void	setWeapon(Weapon &weapon);
-	
-	void	attack() const;
+	str = "LOOSERRR";
 
-private :
+	test.attack(looser);
+	test.takeDamage(4);
+	test.beRepaired(3);
 
-	std::string	_name;
-	Weapon *_weapon;
-	
-};
-
-
-#endif
+	return (0);
+}

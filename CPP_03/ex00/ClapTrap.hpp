@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   Claptrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/23 15:10:03 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/29 17:44:12 by repinat          ###   ########.fr       */
+/*   Created: 2022/11/30 00:23:52 by repinat           #+#    #+#             */
+/*   Updated: 2022/11/30 00:48:10 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-# define HUMANB_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 #include <iostream>
-#include "Weapon.hpp"
 
-class HumanB
+class ClapTrap
 {
-public :
-		
-	//constructeur
-	HumanB(std::string name);
-	//destructeur
-	~HumanB(void);
+public:
 
-	//setter
-	void	setWeapon(Weapon &weapon);
-	
-	void	attack() const;
+	ClapTrap(void);
+	ClapTrap(std::string _name);
+	ClapTrap(ClapTrap const &src);
+	~ClapTrap(void);
 
-private :
+	ClapTrap &operator=(ClapTrap const &src);
 
-	std::string	_name;
-	Weapon *_weapon;
-	
+	void	attack(const std::string & target);
+	void	takeDamage(unsigned int amount);
+	void	beRepaired(unsigned int amount);
+
+private:
+
+	std::string	name;
+	int			Hit_points;
+	int			Energy_points;
+	int			Attack_damage;
 };
 
 
