@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 18:49:02 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/06 11:34:46 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/07 20:50:29 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public :
 
 	Animal	&operator=(Animal const &src);
 
-	virtual void	makeSound(void) const;
+	virtual void	makeSound(void) const = 0;
 	std::string	getType(void) const;
 
 protected :

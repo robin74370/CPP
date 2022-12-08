@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animal.hpp                                         :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/30 18:49:02 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/06 11:34:46 by repinat          ###   ########.fr       */
+/*   Created: 2022/12/07 20:55:30 by repinat           #+#    #+#             */
+/*   Updated: 2022/12/07 21:03:01 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#include "AMateria.hpp"
 
-#include <iostream>
-
-class Animal
+AMateria::AMateria(void) : _type("Default")
 {
-public :
-
-	Animal(void);
-	Animal(std::string _type);
-	Animal(Animal const &src);
-	~Animal(void);
-
-	Animal	&operator=(Animal const &src);
-
-	virtual void	makeSound(void) const;
-	std::string	getType(void) const;
-
-protected :
-
-	std::string	type;
-};
+	std::cout << "AMateria default constructor called" << std::endl;
+}
 
 
-#endif
+AMateria::AMateria(std::string const & type) : 
+	_type(type)
+{
+	std::cout << "AMateria constructor called" << std::endl;
+}
+
+std::string	const & AMateria::getType(void) const
+{
+	return this->_type;
+}

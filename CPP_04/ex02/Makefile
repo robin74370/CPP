@@ -2,10 +2,11 @@ SRCS =		main.cpp\
 			animal.cpp\
 			Dog.cpp\
 			Cat.cpp\
+			Brain.cpp\
 
 OBJS =		${SRCS:.cpp=.o}
 
-NAME =		Animal
+NAME =		Animal_2
 
 CFLAGS = 	-Wall -Wextra -Werror
 

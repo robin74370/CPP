@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animal.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/30 18:49:02 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/06 11:34:46 by repinat          ###   ########.fr       */
+/*   Created: 2022/11/30 18:49:05 by repinat           #+#    #+#             */
+/*   Updated: 2022/12/07 20:50:54 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#include "animal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
 
-#include <iostream>
-
-class Animal
+int main()
 {
-public :
+	// Animal test;
+	Animal *tab[20];
 
-	Animal(void);
-	Animal(std::string _type);
-	Animal(Animal const &src);
-	~Animal(void);
-
-	Animal	&operator=(Animal const &src);
-
-	virtual void	makeSound(void) const;
-	std::string	getType(void) const;
-
-protected :
-
-	std::string	type;
-};
-
-
-#endif
+	for (int i = 0; i < 20; i++)
+	{
+		if (i < 10)
+			tab[i] = new Dog();
+		else
+			tab[i] = new Cat();
+	}
+	for (int i = 0; i < 20; i++)
+		delete tab[i];
+	return (0);
+}

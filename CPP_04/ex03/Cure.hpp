@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animal.hpp                                         :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/30 18:49:02 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/06 11:34:46 by repinat          ###   ########.fr       */
+/*   Created: 2022/12/07 21:03:42 by repinat           #+#    #+#             */
+/*   Updated: 2022/12/07 21:06:36 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef CURE_HPP
+# define CURE_HPP
 
-#include <iostream>
+#include "AMateria.hpp"
 
-class Animal
+class Cure : public AMateria
 {
+	
 public :
 
-	Animal(void);
-	Animal(std::string _type);
-	Animal(Animal const &src);
-	~Animal(void);
+	Cure(void);
+	Cure(std::string const &type);
+	Cure(Cure const & src);
 
-	Animal	&operator=(Animal const &src);
 
-	virtual void	makeSound(void) const;
-	std::string	getType(void) const;
-
-protected :
-
+	
+private:
 	std::string	type;
-};
-
+}
 
 #endif

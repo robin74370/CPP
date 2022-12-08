@@ -2,10 +2,11 @@ SRCS =		main.cpp\
 			animal.cpp\
 			Dog.cpp\
 			Cat.cpp\
+			Brain.cpp\
 
 OBJS =		${SRCS:.cpp=.o}
 
-NAME =		Animal
+NAME =		Abstrait_class
 
 CFLAGS = 	-Wall -Wextra -Werror
 

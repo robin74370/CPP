@@ -6,11 +6,13 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 18:49:05 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/30 19:18:28 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/06 11:06:40 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "animal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
 
 int main()
 {
