@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:12:19 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/18 15:43:19 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/11 15:00:27 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Phonebook
 	public:
 
 	Phonebook(void);
-//  Phonebook::~Phonebook(void);
+	Phonebook::~Phonebook(void);
 
 	void    add(void);
 	void    search(void);
@@ -43,6 +43,11 @@ class Phonebook
 
 	Contact contacts[8];
 };
+
+Phonebook::~Phonebook(void)
+{
+	std::cout << "Destructor called" << std::endl;
+}
 
 Phonebook::Phonebook(void)
 {
@@ -103,7 +108,6 @@ void    Phonebook::search(void)
 	while(42)
 	{
 		std::cin >> command;
-	//	if (checker que c bien des nombres en entier)
 		if (!ft_isalnum(command))
 		{
 			std::cout << "Contact not found, try again" << std::endl;		
