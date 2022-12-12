@@ -1,4 +1,5 @@
 SRCS =		phonebook.cpp\
+			contact.cpp\
 
 OBJS =		${SRCS:.cpp=.o}
 
@@ -6,7 +7,7 @@ HEADER =	phonebook.hpp
 
 NAME =		Phonebook
 
-CFLAGS = 	-Wall -Wextra -Werror
+CFLAGS = 	-Wall -Wextra -Werror -std=c++98
 
 .c.o	:
 			g++ $(FLAGS) -c $< -o $@

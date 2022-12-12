@@ -6,31 +6,45 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:12:16 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/12 13:46:09 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/12 16:51:08 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
 
-
-
-int main(int ac, char **av)
+Phonebook::Phonebook(void)
+	: counter(0), index(0)
 {
-	Phonebook   pb;
-	std::string command;
-   
-	while(42)
-	{
-		std::cin >> command;
-		if (command == "ADD")
-			pb.add();
-		else if (command == "SEARCH")
-			pb.search();
-		else if (command == "EXIT")
-			return (0);
-		else
-			std::cout << "Wrong input, try again" << std::endl;
-	}
+	std::cout << "Constructor called" << std::endl;
+}
 
-	return (0);
+Phonebook::~Phonebook(void)
+{
+	std::cout << "Destructor called" << std::endl;
+}
+
+std::string	print_search(std::string str)
+{
+	if (str.length() > 10)
+	{
+		str.resize(9);
+		return (str.append("."));
+	}
+	else
+		return (str);
+}
+
+void	Phonebook::setContact(Contact contact)
+{
+	this->contacts[this->index] = contact;
+}
+
+Contact	Phonebook::getContact(int index) const
+{
+	return this->contacts[this->index];
+}
+
+int	Phonebook::getCount(void) const
+{
+	return this->counter;
 }

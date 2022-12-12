@@ -41,7 +41,19 @@
 		"ratio": "cpp",
 		"sstream": "cpp",
 		"tuple": "cpp",
-		"utility": "cpp"
+		"utility": "cpp",
+		"atomic": "cpp",
+		"bit": "cpp",
+		"cstdarg": "cpp",
+		"cstddef": "cpp",
+		"algorithm": "cpp",
+		"iterator": "cpp",
+		"memory": "cpp",
+		"memory_resource": "cpp",
+		"numeric": "cpp",
+		"optional": "cpp",
+		"random": "cpp",
+		"ranges": "cpp"
 	},
 	"C_Cpp.errorSquiggles": "Enabled"
 }

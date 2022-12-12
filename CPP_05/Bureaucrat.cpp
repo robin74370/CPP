@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:10:54 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/12 13:29:41 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/12 13:57:27 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,3 +81,5 @@ void Bureaucrat::GradeTooLowException::GradeTooLow(void)
 {
 	std::cout << "Grade too high, try again" << std::endl;
 }
+
+

@@ -16,3 +16,13 @@ try ()
 */
 // si error : throw std::exception();
 // puis catch (std::exception e)
+
+CPP_00 : OK
+CPP_01 : leaks ex01, pas checke les autres
+CPP_02 :
+CPP_03 :
+CPP_04 :
+CPP_05 :
+CPP_06 :
+CPP_07 :
+CPP_08 :
