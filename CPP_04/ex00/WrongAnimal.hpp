@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/30 18:49:05 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/08 16:42:03 by repinat          ###   ########.fr       */
+/*   Created: 2022/12/08 15:38:24 by repinat           #+#    #+#             */
+/*   Updated: 2022/12/08 15:49:44 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
-int main()
+#include <iostream>
+
+class WrongAnimal
 {
-	// Animal test;
-	Animal *tab[20];
+public :
 
-	for (int i = 0; i < 20; i++)
-	{
-		if (i < 10)
-			tab[i] = new Dog();
-		else
-			tab[i] = new Cat();
-	}
-	for (int i = 0; i < 20; i++)
-		delete tab[i];
-	return (0);
-}
+	WrongAnimal(void);
+	WrongAnimal(std::string _type);
+	WrongAnimal(WrongAnimal const &src);
+	~WrongAnimal(void);
+
+	WrongAnimal	&operator=(WrongAnimal const &src);
+
+	virtual void	makeSound(void) const;
+	std::string	getType(void) const;
+
+protected :
+
+	std::string	type;
+
+};
+
+#endif

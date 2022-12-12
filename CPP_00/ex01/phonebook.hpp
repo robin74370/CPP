@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:12:19 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/18 15:43:19 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/12 13:47:22 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Phonebook
 	public:
 
 	Phonebook(void);
-//  Phonebook::~Phonebook(void);
+	~Phonebook(void);
 
 	void    add(void);
 	void    search(void);
@@ -48,6 +48,10 @@ Phonebook::Phonebook(void)
 {
 	this->counter = 0;
 	this->added_elements = 0;
+}
+
+Phonebook::~Phonebook(void)
+{
 }
 
 std::string	print_search(std::string str)

@@ -1,8 +1,18 @@
-a quoi sert virtual ?
 revoir utilisation des references
 revoir cpp_02
 
-implementer une classe WrongAnimal et WrongCat dans ex00 de CPP04
-
 -faire un main avec plus de test pour ex01 de CPP04
 -Verifier si besoin de d'ecrire des fonctions = 0 dans le cas des class abstraites
+
+
+
+// faire des test dans un bloc try;
+/*
+try ()
+{
+	if()
+	else()
+}
+*/
+// si error : throw std::exception();
+// puis catch (std::exception e)

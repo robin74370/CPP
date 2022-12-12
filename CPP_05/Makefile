@@ -1,8 +1,9 @@
-SRCS =		megaphone.cpp\
+SRCS =		main.cpp\
+			Bureaucrat.cpp\
 
 OBJS =		${SRCS:.cpp=.o}
 
-NAME =		megaphone
+NAME =		Abstrait_class
 
 CFLAGS = 	-Wall -Wextra -Werror
 
