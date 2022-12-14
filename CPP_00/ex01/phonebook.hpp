@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:12:19 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/13 16:17:01 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/14 17:00:54 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,14 @@ public:
 
 	void	setContact(Contact contact);
 
-	Contact	getContact(int index) const;
-	int	getCount(void) const;
-	void	incrCounter(void);
+	Contact	getContact(int _index) const;
+	int		getCount(void) const;
 
 private:
 
 	Contact contacts[8];
-	int index;
-	int counter;
+	static int counter;
+	int	index;
 };
 
 #endif

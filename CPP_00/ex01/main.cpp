@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 01:28:18 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/13 16:19:45 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/14 17:09:41 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,28 +49,33 @@ void    search(Phonebook *pb)
 	std::string	command;
 
 	i = 0;
+	std::cout << pb->getCount() << std::endl;
 	while (i < pb->getCount())
 	{
+		Contact	contact;
+		contact = pb->getContact(i);
+
 		std::cout << std::setfill(' ') << std::setw(10);
 		std::cout << i << "|";
 		std::cout << std::setfill(' ') << std::setw(10);
-		std::cout << print_search(pb->getContact(i).getFirstName()) << "|";
+		std::cout << print_search(contact.getFirstName()) << "|";
 		std::cout << std::setfill(' ') << std::setw(10);
-		std::cout << print_search(pb->getContact(i).getLastName()) << "|";
+		std::cout << print_search(contact.getLastName()) << "|";
 		std::cout << std::setfill(' ') << std::setw(10);
-		std::cout << print_search(pb->getContact(i).getNickname()) << "|";
+		std::cout << print_search(contact.getNickname()) << "|";
 		std::cout << std::setfill(' ') << std::setw(10);
 		std::cout << std::endl;
 		i++;
 	}
-	
 	booleen = 0;
-	while(42)
+	while(1)
 	{
 		std::cin >> command;
-		if (!ft_isalnum(command))
+		if (std::cin.eof())
+			exit(0);
+		else if (!ft_isalnum(command))
 		{
-			std::cout << "Contact not found, try again" << std::endl;		
+			std::cout << "Enter a number between 0 and 7" << std::endl;		
 			booleen = 1;
 		}
 		else
@@ -101,45 +106,50 @@ void    add(Phonebook *pb)
 {
 	Contact	contact;
 	std::string	str;
-
+	
 	std::cout << "First Name : ";
 	std::getline(std::cin, str);
+	if (std::cin.eof())
+		exit(0);
 	contact.setFirstName(str);
 	std::cout << "Last Name : ";
 	std::getline(std::cin, str);
+	if (std::cin.eof())
+		exit(0);
 	contact.setLastName(str);
 	std::cout << "Nickname : ";
 	std::getline(std::cin, str);
+	if (std::cin.eof())
+		exit(0);
 	contact.setNickname(str);
 	std::cout << "Phone Number : ";
 	std::getline(std::cin, str);
+	if (std::cin.eof())
+		exit(0);
 	contact.setPhonenumber(str);
 	std::cout << "Darkest Secret : ";
 	std::getline(std::cin, str);
+	if (std::cin.eof())
+		exit(0);
 	contact.setDarkestSecret(str);
-	pb->incrCounter();
-	if (pb->incrCounter() >= 8)
-		pb->incrCounter() = 0;
-	pb->;
+	pb->setContact(contact);
 }
 
 int main(int ac, char **av)
 {
-	Phonebook   pb;
+	Phonebook	pb;
 	std::string command;
    
-	while(42)
+	while(1)
 	{
-		std::cin >> command;
+		getline(std::cin, command);
 		if (command == "ADD")
-			pb.add();
+			add(&pb);
 		else if (command == "SEARCH")
-			pb.search();
+			search(&pb);
 		else if (command == "EXIT")
-			return (0);
-		else
-			std::cout << "Wrong input, try again" << std::endl;
+			return (0) ;
+		else if (std::cin.eof())
+			return(0);
 	}
-
-	return (0);
 }
