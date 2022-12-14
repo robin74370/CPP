@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:59:21 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/12 16:37:57 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/13 01:29:00 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CONTACT_HPP
 
 #include <string>
+#include <iostream>
 
 class Contact
 {

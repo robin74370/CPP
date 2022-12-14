@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:12:16 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/12 16:51:08 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/13 16:18:03 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,9 @@ Contact	Phonebook::getContact(int index) const
 int	Phonebook::getCount(void) const
 {
 	return this->counter;
+}
+
+void	Phonebook::incrCounter(void)
+{
+	this->counter++;
 }

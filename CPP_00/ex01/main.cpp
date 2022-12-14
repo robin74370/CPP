@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 16:53:41 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/12 16:55:58 by repinat          ###   ########.fr       */
+/*   Created: 2022/12/13 01:28:18 by repinat           #+#    #+#             */
+/*   Updated: 2022/12/13 16:19:45 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,16 +49,16 @@ void    search(Phonebook *pb)
 	std::string	command;
 
 	i = 0;
-	while (i < pb->added_elements)
+	while (i < pb->getCount())
 	{
 		std::cout << std::setfill(' ') << std::setw(10);
 		std::cout << i << "|";
 		std::cout << std::setfill(' ') << std::setw(10);
-		std::cout << print_search(this->contacts[i].getFirstName()) << "|";
+		std::cout << print_search(pb->getContact(i).getFirstName()) << "|";
 		std::cout << std::setfill(' ') << std::setw(10);
-		std::cout << print_search(this->contacts[i].getLastName()) << "|";
+		std::cout << print_search(pb->getContact(i).getLastName()) << "|";
 		std::cout << std::setfill(' ') << std::setw(10);
-		std::cout << print_search(this->contacts[i].getNickname()) << "|";
+		std::cout << print_search(pb->getContact(i).getNickname()) << "|";
 		std::cout << std::setfill(' ') << std::setw(10);
 		std::cout << std::endl;
 		i++;
@@ -75,18 +75,18 @@ void    search(Phonebook *pb)
 		}
 		else
 			value = std::stoi(command);
-		if (value >= 0 && value < this->added_elements)
+		if (value >= 0 && value < pb->getCount())
 		{
 			std::cout << "First name :\t\t";
-			std::cout << this->contacts[value].getFirstName() << std::endl;
+			std::cout << pb->getContact(value).getFirstName() << std::endl;
 			std::cout << "Last name :\t\t";
-			std::cout << this->contacts[value].getLastName() << std::endl;
+			std::cout << pb->getContact(value).getLastName() << std::endl;
 			std::cout << "Nickname :\t\t";
-			std::cout << this->contacts[value].getNickname() << std::endl;
+			std::cout << pb->getContact(value).getNickname() << std::endl;
 			std::cout << "Phone number :\t\t";
-			std::cout << this->contacts[value].getPhonenumber() << std::endl;
+			std::cout << pb->getContact(value).getPhonenumber() << std::endl;
 			std::cout << "Darkest secret :\t";
-			std::cout << this->contacts[value].getDarkestSecret() << std::endl;
+			std::cout << pb->getContact(value).getDarkestSecret() << std::endl;
 			break ;
 		}
 		else
@@ -117,9 +117,9 @@ void    add(Phonebook *pb)
 	std::cout << "Darkest Secret : ";
 	std::getline(std::cin, str);
 	contact.setDarkestSecret(str);
-	this->counter++;
-	if (this->counter >= 8)
-		this->counter = 0;
+	pb->incrCounter();
+	if (pb->incrCounter() >= 8)
+		pb->incrCounter() = 0;
 	pb->;
 }
 

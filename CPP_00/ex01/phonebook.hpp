@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:12:19 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/12 16:56:17 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/13 16:17:01 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ public:
 
 	Contact	getContact(int index) const;
 	int	getCount(void) const;
+	void	incrCounter(void);
 
 private:
 
