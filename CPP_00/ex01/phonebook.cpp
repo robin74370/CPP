@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:12:16 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/14 17:15:06 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/16 15:07:55 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,21 @@
 
 
 Phonebook::Phonebook(void)
-	: index(0)
+	: nb(-1), counter(0)
 {
-	std::cout << "Constructor called" << std::endl;
 }
 
 Phonebook::~Phonebook(void)
 {
-	std::cout << "Destructor called" << std::endl;
 }
 
 void	Phonebook::setContact(Contact contact)
-{
-	this->contacts[this->index] = contact;
-	if ((this->counter % 8) == 0)
-		this->index = -1;
-	this->index++;
+{	
+	this->contacts[this->counter] = contact;
+	if (this->counter == 7)
+		this->counter = -1;
+	if (this->nb != 7)
+		this->nb++;
 	this->counter++;
 }
 
@@ -43,4 +42,7 @@ int	Phonebook::getCount(void) const
 	return this->counter;
 }
 
-int Phonebook::counter = 0;
+int	Phonebook::getnb(void) const
+{
+	return (this->nb);
+}

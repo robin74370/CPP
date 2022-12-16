@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 01:28:18 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/14 17:09:41 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/16 15:27:21 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,7 @@ void    search(Phonebook *pb)
 	std::string	command;
 
 	i = 0;
-	std::cout << pb->getCount() << std::endl;
-	while (i < pb->getCount())
+	while (i < (pb->getnb() + 1))
 	{
 		Contact	contact;
 		contact = pb->getContact(i);
@@ -70,7 +69,8 @@ void    search(Phonebook *pb)
 	booleen = 0;
 	while(1)
 	{
-		std::cin >> command;
+		
+		std::getline(std::cin, command);
 		if (std::cin.eof())
 			exit(0);
 		else if (!ft_isalnum(command))
@@ -80,7 +80,7 @@ void    search(Phonebook *pb)
 		}
 		else
 			value = std::stoi(command);
-		if (value >= 0 && value < pb->getCount())
+		if (value >= 0 && value < (pb->getnb() + 1))
 		{
 			std::cout << "First name :\t\t";
 			std::cout << pb->getContact(value).getFirstName() << std::endl;
@@ -106,31 +106,61 @@ void    add(Phonebook *pb)
 {
 	Contact	contact;
 	std::string	str;
-	
-	std::cout << "First Name : ";
-	std::getline(std::cin, str);
+
+	do
+	{
+		std::cout << "First Name : ";
+		std::getline(std::cin, str);
+		if (std::cin.eof())
+			exit(0);	
+	}
+	while (str.empty());
 	if (std::cin.eof())
-		exit(0);
+		exit(0);	
 	contact.setFirstName(str);
-	std::cout << "Last Name : ";
-	std::getline(std::cin, str);
+	do
+	{
+		std::cout << "Last Name : ";
+		std::getline(std::cin, str);
+		if (std::cin.eof())
+			exit(0);
+	}
+	while (str.empty());
 	if (std::cin.eof())
-		exit(0);
+		exit(0);	
 	contact.setLastName(str);
-	std::cout << "Nickname : ";
-	std::getline(std::cin, str);
+	do
+	{
+		std::cout << "Nickname : ";
+		std::getline(std::cin, str);
+		if (std::cin.eof())
+			exit(0);
+	}
+	while (str.empty());
 	if (std::cin.eof())
-		exit(0);
+		exit(0);	
 	contact.setNickname(str);
-	std::cout << "Phone Number : ";
-	std::getline(std::cin, str);
+	do
+	{
+		std::cout << "Phone Number : ";
+		std::getline(std::cin, str);
+		if (std::cin.eof())
+			exit(0);
+	}
+	while (str.empty());
 	if (std::cin.eof())
-		exit(0);
+		exit(0);	
 	contact.setPhonenumber(str);
-	std::cout << "Darkest Secret : ";
-	std::getline(std::cin, str);
+	do
+	{
+		std::cout << "Darkest Secret : ";
+		std::getline(std::cin, str);
+		if (std::cin.eof())
+			exit(0);
+	}
+	while (str.empty());
 	if (std::cin.eof())
-		exit(0);
+		exit(0);	
 	contact.setDarkestSecret(str);
 	pb->setContact(contact);
 }

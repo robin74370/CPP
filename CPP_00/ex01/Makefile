@@ -8,15 +8,15 @@ HEADER =	phonebook.hpp
 
 NAME =		Phonebook
 
-CFLAGS = 	-Wall -Wextra -Werror -std=c++98
+FLAGS = 	-Wall -Wextra -Werror -std=c++98
 
 .c.o	:
-			g++ $(FLAGS) -c $< -o $@
+			c++ $(FLAGS) -c $< -o $@
 
 all	:		$(NAME)
 
 $(NAME)	:	$(OBJS)
-			clang++ $(FLAGS) -o $(NAME) $(OBJS)
+			c++ $(FLAGS) -o $(NAME) $(OBJS)
 
 clean:
 			rm -rf ${OBJS}

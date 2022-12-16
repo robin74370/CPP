@@ -8,15 +8,15 @@ HEADER =	ZombieHorde.hpp
 
 NAME =		Zombie_Horde
 
-CFLAGS = 	-Wall -Wextra -Werror
+FLAGS = 	-Wall -Wextra -Werror -std=c++98
 
 .c.o	:
-			clang++ $(FLAGS) -c $< -o $@
+			c++ $(FLAGS) -c $< -o $@
 
 all	:		$(NAME)
 
 $(NAME)	:	$(OBJS)
-			clang++ $(FLAGS) -o $(NAME) $(OBJS)
+			c++ $(FLAGS) -o $(NAME) $(OBJS)
 
 clean:
 			rm -rf ${OBJS}
