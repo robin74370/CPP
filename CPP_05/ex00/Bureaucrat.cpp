@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:10:54 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/12 13:57:27 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/16 18:11:15 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,11 @@ Bureaucrat::Bureaucrat(Bureaucrat const & src)
 	return ;
 }
 
+Bureaucrat::~Bureaucrat(void)
+{
+	std::cout << "Bureaucrat destructor called" << std::endl;
+}
+
 Bureaucrat	&Bureaucrat::operator=(Bureaucrat const & src)
 {
 	if (this != &src)
@@ -56,7 +61,7 @@ int	Bureaucrat::getGrade(void) const
 	return (this->grade);
 }
 
-void	Bureaucrat::IncrGrade(void)
+void	Bureaucrat::incrGrade(void)
 {
 	if (this->grade >= 1)
 		this->grade--;
@@ -82,4 +87,24 @@ void Bureaucrat::GradeTooLowException::GradeTooLow(void)
 	std::cout << "Grade too high, try again" << std::endl;
 }
 
+Bureaucrat::GradeTooHighException::GradeTooHighException(void)
+{
+}
 
+Bureaucrat::GradeTooHighException::~GradeTooHighException(void)
+{
+}
+
+Bureaucrat::GradeTooLowException::GradeTooLowException(void)
+{
+}
+
+Bureaucrat::GradeTooLowException::~GradeTooLowException(void)
+{
+}
+
+
+std::ostream	&Bureaucrat::operator<<(std::ostream & o, Bureaucrat & ref)
+{
+	o << ref.getName() << ", Bureaucrat grade" << ref.getGrade() << std::endl;
+}

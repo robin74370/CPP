@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:10:57 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/12 13:57:37 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/16 18:11:23 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,31 @@ public:
 	~Bureaucrat(void);
 
 	Bureaucrat	&operator=(Bureaucrat const & src);
+	std::ostream	&operator<<(std::ostream & o, Bureaucrat & ref);
 
 	void	incrGrade(void);
 	void	decrGrade(void);
 
-	std::string	getName(void);
-	int	getGrade(void);
+	std::string	getName(void) const;
+	int	getGrade(void) const;
 
-	class GradeTooHighException
+	class GradeTooHighException : public std::exception
 	{
-		
+		public :
+			GradeTooHighException(void);
+			~GradeTooHighException(void);
+
+			void GradeTooHigh(void);
 	};
-	
+
+	class GradeTooLowException : public std::exception
+	{
+		public :
+			GradeTooLowException(void);
+			~GradeTooLowException(void);
+
+			void GradeTooLow(void);
+	};
 
 private:
 
