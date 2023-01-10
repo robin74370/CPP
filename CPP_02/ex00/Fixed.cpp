@@ -6,13 +6,13 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:47:01 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/29 23:30:22 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/05 15:18:30 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-int	Fixed::_bits = 8;
+// int	Fixed::_bits = 8;
 
 //constructeur par defaut
 Fixed::Fixed(void) : _fixed(0)
@@ -38,7 +38,7 @@ Fixed::~Fixed(void)
 //surcharge d'operateur egal
 Fixed	&Fixed::operator=(Fixed const &_src)
 {
-	std::cout << "Assignement operator called" << std::endl;
+	std::cout << "Copy Assignement operator called" << std::endl;
 	if (this != &_src)
 		this->_fixed = _src.getRawBits();
 	return (*this);

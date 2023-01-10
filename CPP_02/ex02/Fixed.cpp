@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/29 23:33:04 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/10 19:30:39 by repinat          ###   ########.fr       */
+/*   Created: 2023/01/10 19:33:33 by repinat           #+#    #+#             */
+/*   Updated: 2023/01/10 19:54:42 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,4 +86,58 @@ std::ostream& operator<<(std::ostream& o, const Fixed& fixed)
 {
 	o << fixed.toFloat();
 	return (o);
+}
+
+//operateurs de comparaison
+
+bool	Fixed::operator>(Fixed const &_src)
+{
+	return (this->_fixed > _src._fixed);
+}
+
+bool	Fixed::operator<(Fixed const &_src)
+{
+	return (this->_fixed < _src._fixed);
+}
+
+bool	Fixed::operator>=(Fixed const &_src)
+{
+	return (this->_fixed >= _src._fixed);
+}
+
+bool	Fixed::operator>=(Fixed const &_src)
+{
+	return (this->_fixed <= _src._fixed);
+}
+
+bool	Fixed::operator==(Fixed const &_src)
+{
+	return (this->_fixed == _src._fixed);
+}
+
+bool	Fixed::operator!=(Fixed const &_src)
+{
+	return (this->_fixed != _src._fixed);
+}
+
+//operateurs arithmetiques
+
+Fixed	Fixed::operator+(Fixed const & _src)
+{
+	return (this->_fixed + _src._fixed);
+}
+
+Fixed	Fixed::operator-(Fixed const & _src)
+{
+	return (this->_fixed - _src._fixed);
+}
+
+Fixed	Fixed::operator*(Fixed const & _src)
+{
+	return (this->_fixed * _src._fixed);
+}
+
+Fixed	Fixed::operator/(Fixed const & _src)
+{
+	return (this->_fixed / _src._fixed);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/29 23:33:02 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/10 19:26:04 by repinat          ###   ########.fr       */
+/*   Created: 2023/01/10 19:33:50 by repinat           #+#    #+#             */
+/*   Updated: 2023/01/10 19:58:02 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,26 @@ public :
 	float	toFloat(void) const;
 	int		toInt(void) const;
 
+	//surcharge op des 6 op de comparaison
+
+	bool	operator>(Fixed const &_src);
+	bool	operator<(Fixed const &_src);
+	bool	operator>=(Fixed const &_src);
+	bool	operator<=(Fixed const &_src);
+	bool	operator==(Fixed const &_src);
+	bool	operator!=(Fixed const &_src);
+
+	//surcharge des 4 operateur arithmetiques
+
+	Fixed	operator+(Fixed const & _src);
+	Fixed	operator-(Fixed const & _src);
+	Fixed	operator*(Fixed const & _src);
+	Fixed	operator/(Fixed const & _src);
+
+	//surcharge des operateur incr et decr
+
+	Fixed	&operator++(void);
+	Fixed	&operator--(void);
 	
 
 private:

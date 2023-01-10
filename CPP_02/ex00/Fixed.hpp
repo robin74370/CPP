@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:47:04 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/29 23:30:17 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/05 15:17:58 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public :
 private:
 
 	int	_fixed;
-	static int	_bits;
+	static const int	_bits = 8;
 
 };
 
