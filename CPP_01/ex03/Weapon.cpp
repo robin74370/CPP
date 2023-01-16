@@ -6,16 +6,16 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 18:30:09 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/28 14:50:56 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/27 15:23:40 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
 //constructeur
-Weapon::Weapon(std::string type)
+Weapon::Weapon(std::string _type)
 {
-	this->_type = type;
+	this->type = type;
 }
 
 //destructeur
@@ -23,13 +23,13 @@ Weapon::~Weapon(void)
 {
 }
 
-std::string &Weapon::getType(void)
+const std::string &Weapon::getType(void)
 {
-	std::string	&ref = this->_type;
+	std::string	&ref = this->type;
 	return (ref);
 }
 
 void	Weapon::setType(std::string str)
 {
-	this->_type = str;
+	this->type = str;
 }

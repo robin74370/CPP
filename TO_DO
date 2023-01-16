@@ -2,29 +2,14 @@ revoir utilisation des references
 revoir cpp_02
 
 -faire un main avec plus de test pour ex01 de CPP04
--Verifier si besoin de d'ecrire des fonctions = 0 dans le cas des class abstraites
+-Verifier si besoin de d'ecrire des fonctions = 0 dans le cas des 
 
-
-
-// faire des test dans un bloc try;
-/*
-try ()
-{
-	if()
-	else()
-}
-*/
-// si error : throw std::exception();
-// puis catch (std::exception e)
-
-CPP_00 : OK
-CPP_01 : leaks ex01, pas checke les autres
-CPP_02 :
+CPP_00 : VALIDE
+CPP_01 : OK
+CPP_02 : OK
 CPP_03 :
 CPP_04 :
-CPP_05 :
+CPP_05 : Voir include class form (erreur compilation)
 CPP_06 :
 CPP_07 :
 CPP_08 :
-
-// juste checker lhistoire du compteur si il ya plus de 8 contacts

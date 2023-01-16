@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 14:45:10 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/16 18:04:24 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/12 16:45:33 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-	Bureaucrat Francis("francis", 151);
+	Bureaucrat Francis("francis", 149);
 	Bureaucrat Roger("rogers", 1);
 
 	try
@@ -23,7 +23,7 @@ int main()
 		Roger.incrGrade();
 	}
 	
-	catch(const std::exception& e)
+	catch(const Bureaucrat::GradeTooHighException & e)
 	{
 		std::cerr << e.what() << std::endl;
 	}

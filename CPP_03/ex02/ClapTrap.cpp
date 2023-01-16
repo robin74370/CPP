@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 01:32:40 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/30 17:59:51 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/12 17:22:51 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &src)
 {
 	if (this != &src)
 	{
+		this->name = src.name;
 		this->Hit_points = src.Hit_points;
 		this->Energy_points = src.Energy_points;
 		this->Attack_damage = src.Attack_damage;

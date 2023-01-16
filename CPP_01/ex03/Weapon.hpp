@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 18:26:37 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/28 14:33:21 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/27 15:23:33 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ public :
 	~Weapon(void);
 
 	//getter
-	std::string	&getType(void);
+	const std::string	&getType(void);
 	
 	//setter
-	void	setType(std::string type);
+	void	setType(std::string _type);
 
 private :
 
-	std::string _type;
+	std::string type;
 };
 
 

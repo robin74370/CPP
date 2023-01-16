@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 19:33:50 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/10 19:58:02 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/11 19:30:15 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,17 @@ public :
 
 	//surcharge des operateur incr et decr
 
-	Fixed	&operator++(void);
-	Fixed	&operator--(void);
+	Fixed	&operator++();
+	Fixed	operator++(int);
+	Fixed	&operator--();
+	Fixed	operator--(int);
 	
+	//fonctions min et max
+
+	static	Fixed & min(Fixed & a, Fixed & b);
+	static const Fixed & min(const Fixed & a, const Fixed & b);
+	static	Fixed & max(Fixed & a, Fixed & b);
+	static const Fixed & max(const Fixed & a, const Fixed & b);
 
 private:
 

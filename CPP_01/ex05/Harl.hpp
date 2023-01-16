@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:09:48 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/29 17:43:37 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/27 15:34:05 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	Harl(void);
 	~Harl(void);
 
-	void	complain(std::string level) const;
+	void	complain(std::string level);
 	
 private:
 

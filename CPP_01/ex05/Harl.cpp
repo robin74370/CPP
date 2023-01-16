@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:17:33 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/29 17:43:31 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/27 15:34:41 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 Harl::Harl()
 {
+	std::cout << "Harl default constructor called" << std::endl;
 }
 
 Harl::~Harl()
 {
+	std::cout << "Harl default destructor called" << std::endl;
 }
 
-void	Harl::complain(std::string level) const
+void	Harl::complain(std::string level)
 {
 	void	 (Harl::*complain_p[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	std::string	levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};

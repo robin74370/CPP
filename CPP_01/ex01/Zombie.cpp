@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 15:48:46 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/12 14:59:11 by repinat          ###   ########.fr       */
+/*   Updated: 2022/12/27 15:17:35 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,17 @@
 
 Zombie::Zombie(void)
 {
+	std::cout << "Zombie default constructor called" << std::endl;
 }
 
 Zombie::Zombie(std::string set_name) : name(set_name)
 {
-	std::cout << "Zombie <" << this->name << "> constructor called" << std::endl;
+	std::cout << "Zombie " << this->name << " constructor called" << std::endl;
 }
 
 Zombie::~Zombie(void)
 {
-	std::cout << "Zombie <" << this->name << "> destructor called" << std::endl;
+	std::cout << "Zombie " << this->name << " destructor called" << std::endl;
 }
 
 Zombie  *newZombie(std::string name)

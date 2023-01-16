@@ -5,14 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 16:10:57 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/12 17:25:53 by repinat          ###   ########.fr       */
+/*   Created: 2023/01/12 16:48:21 by repinat           #+#    #+#             */
+/*   Updated: 2023/01/16 12:04:25 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
 
+#include "Form.hpp"
+#include <string.h>
 #include <iostream>
 #include <exception>
 
@@ -34,11 +36,11 @@ public:
 	std::string	getName(void) const;
 	int	getGrade(void) const;
 
+	void	signForm(Form & form);
+
 	class GradeTooHighException : public std::exception
 	{
 		public :
-			GradeTooHighException(void);
-			~GradeTooHighException(void);
 			const char* what() const throw()
 			{
 				return "Grade is too high";
@@ -48,8 +50,6 @@ public:
 	class GradeTooLowException : public std::exception
 	{
 		public :
-			GradeTooLowException(void);
-			~GradeTooLowException(void);
 			const char* what() const throw()
 			{
 				return "Grade is too low";
