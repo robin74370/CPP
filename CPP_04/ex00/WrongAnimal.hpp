@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 15:38:24 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/08 15:49:44 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/24 13:45:42 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ class WrongAnimal
 public :
 
 	WrongAnimal(void);
-	WrongAnimal(std::string _type);
 	WrongAnimal(WrongAnimal const &src);
 	~WrongAnimal(void);
 

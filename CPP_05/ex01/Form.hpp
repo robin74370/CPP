@@ -6,9 +6,11 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 16:48:52 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/16 11:59:19 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/16 13:43:41 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+class Bureaucrat;
 
 #ifndef FORM_HPP
 # define FORM_HPP

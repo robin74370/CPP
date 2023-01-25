@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 15:38:29 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/08 16:03:40 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/24 13:45:45 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ class WrongCat : public WrongAnimal
 public :
 
 	WrongCat(void);
-	WrongCat(std::string _type);
 	WrongCat(WrongCat const &src);
 	~WrongCat(void);
 

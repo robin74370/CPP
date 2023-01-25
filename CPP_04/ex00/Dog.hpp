@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 09:29:26 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/06 11:33:35 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/24 13:45:35 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ class Dog : public Animal
 public :
 
 	Dog(void);
-	Dog(std::string _type);
 	Dog(Dog const &src);
 	~Dog(void);
 

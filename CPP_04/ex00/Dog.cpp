@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 09:29:24 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/06 12:36:37 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/24 13:46:21 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,6 @@
 Dog::Dog(void) : Animal("Dog"), sound("Barks")
 {
 	std::cout << "Dog default constructor called" << std::endl;
-}
-
-Dog::Dog(std::string _type) : Animal(_type), sound("Barks")
-{
-	std::cout << "Dog constructor called" << std::endl;
 }
 
 Dog::Dog(Dog const &src)

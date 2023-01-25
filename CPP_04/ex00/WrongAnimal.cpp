@@ -6,22 +6,16 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 15:38:21 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/08 16:02:08 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/24 13:46:16 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal(void)
-	: type("WrongAnimal Default")
+	: type("WrongAnimal")
 {
 	std::cout << "WrongAnimal default constructor called" << std::endl;
-}
-
-WrongAnimal::WrongAnimal(std::string _type)
-	: type(_type)
-{
-	std::cout << "WrongAnimal constructor called" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(WrongAnimal const &src)

@@ -53,7 +53,8 @@
 		"numeric": "cpp",
 		"optional": "cpp",
 		"random": "cpp",
-		"ranges": "cpp"
+		"ranges": "cpp",
+		"list": "cpp"
 	},
 	"C_Cpp.errorSquiggles": "Enabled"
 }

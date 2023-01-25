@@ -7,9 +7,9 @@ revoir cpp_02
 CPP_00 : VALIDE
 CPP_01 : OK
 CPP_02 : OK
-CPP_03 :
-CPP_04 :
-CPP_05 : Voir include class form (erreur compilation)
-CPP_06 :
-CPP_07 :
-CPP_08 :
+CPP_03 : OK
+CPP_04 : Ok (Checker pour la copie profonde ex01)
+CPP_05 : Faire un meilleur main pour ex01
+CPP_06 : Fini
+CPP_07 : fini, faire un main de test pour ex02
+CPP_08 : faire main de test pour ex01

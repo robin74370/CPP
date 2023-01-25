@@ -6,9 +6,11 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 16:48:21 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/16 12:04:25 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/16 13:44:01 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+class Form;
 
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP

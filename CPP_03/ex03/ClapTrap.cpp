@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 01:32:40 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/30 18:00:03 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/24 13:38:08 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,9 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &src)
 
 void	ClapTrap::attack(const std::string & target)
 {
-	std::cout << "ClapTrap <" << this->name << "> attacks <";
-	std::cout << target << ">, causing <";
-	std::cout << this->Attack_damage << "> points of damage !";
+	std::cout << "ClapTrap " << this->name << " attacks ";
+	std::cout << target << ", causing ";
+	std::cout << this->Attack_damage << " points of damage !";
 	std::cout << std::endl;
 	this->Energy_points--;
 }
@@ -62,7 +62,7 @@ void	ClapTrap::attack(const std::string & target)
 void	ClapTrap::takeDamage(unsigned int amount)
 {
 	this->Hit_points -= (int)amount;
-	std::cout << "ClapTrap <" << this->name << "> took ";
+	std::cout << "ClapTrap " << this->name << " took ";
 	std::cout << amount << " points of damages. ";
 	std::cout << "New amount of PV is now " << this->Hit_points;
 	std::cout << std::endl;
@@ -72,7 +72,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 {
 	this->Energy_points--;
 	this->Hit_points += (int)amount;
-	std::cout << "ClapTrap <" << this->name << "> took a potion ! ";
+	std::cout << "ClapTrap " << this->name << " took a potion ! ";
 	std::cout << amount << " points recovered. ";
 	std::cout << "New amount of PV is now " << this->Hit_points;
 	std::cout << std::endl;

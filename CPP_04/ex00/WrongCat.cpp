@@ -12,14 +12,9 @@
 
 #include "WrongCat.hpp"
 
-WrongCat::WrongCat(void) : WrongAnimal("WrongCat"), sound("Meows")
+WrongCat::WrongCat(void) : WrongAnimal(), sound("Meows")
 {
 	std::cout << "WrongCat default constructor called" << std::endl;
-}
-
-WrongCat::WrongCat(std::string _type) : WrongAnimal(_type), sound("Meows")
-{
-	std::cout << "WrongCat constructor called" << std::endl;
 }
 
 WrongCat::WrongCat(WrongCat const &src)

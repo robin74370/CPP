@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 18:49:05 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/08 16:06:21 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/24 13:41:49 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,11 @@ int main()
 	j->makeSound();
 	f->makeSound();
 
+
+	delete(meta);
 	delete (j);
-	// meta->makeSound();
+	delete (i);
+	delete (f);
 	
 	return 0;
 

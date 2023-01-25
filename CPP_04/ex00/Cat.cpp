@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 09:29:16 by repinat           #+#    #+#             */
-/*   Updated: 2022/12/06 12:36:32 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/24 13:46:30 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,6 @@
 Cat::Cat(void) : Animal("Cat"), sound("Meows")
 {
 	std::cout << "Cat default constructor called" << std::endl;
-}
-
-Cat::Cat(std::string _type) : Animal(_type), sound("Meows")
-{
-	std::cout << "Cat constructor called" << std::endl;
 }
 
 Cat::Cat(Cat const &src)

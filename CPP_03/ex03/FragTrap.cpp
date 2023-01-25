@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 12:27:34 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/30 18:42:11 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/24 13:38:29 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,6 @@ FragTrap	&FragTrap::operator=(FragTrap const &src)
 
 void	FragTrap::highFiveGuys(void)
 {
-	std::cout << "Fragtrap <" << this->name << "> asked for a high five";
+	std::cout << "Fragtrap " << this->name << " asked for a high five";
 	std::cout << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 23:33:02 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/10 19:26:04 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/24 13:24:33 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,11 @@ public :
 
 	//constructeur par default
 	Fixed(void);
-	//constructeur de recopie
-	Fixed(Fixed const &src);
+	//constructeurs
 	Fixed(int const _int);
 	Fixed(float const _float);
+	//constructeur de recopie
+	Fixed(Fixed const &src);
 	
 	~Fixed(void);
 	

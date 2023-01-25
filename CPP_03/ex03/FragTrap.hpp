@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 12:27:37 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/30 18:07:57 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/24 13:37:31 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ public :
 	FragTrap &operator=(FragTrap const &src);
 
 	void	highFiveGuys(void);
-	
-private :
 };
 
 #endif
