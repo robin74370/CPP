@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 09:29:24 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/24 13:48:10 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/25 18:15:34 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,10 @@ Dog::~Dog(void)
 Dog	&Dog::operator=(Dog const &src)
 {
 	if (this != &src)
+	{
 		this->type = src.type;
+		this->brain = new Brain(*src.brain);
+	}
 	return *this;
 }
 

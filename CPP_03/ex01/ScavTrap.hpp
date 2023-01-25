@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 01:33:06 by repinat           #+#    #+#             */
-/*   Updated: 2022/11/30 18:26:14 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/25 13:22:41 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ public:
 	void	attack(const std::string & target);
 
 	void	guardGate(void);
-
-private :	
 };
 
 

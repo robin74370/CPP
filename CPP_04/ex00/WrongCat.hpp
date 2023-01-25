@@ -6,12 +6,12 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 15:38:29 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/24 13:45:45 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/25 16:44:47 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WROCAT_HPP
-# define CAT_HPP
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
 #include "WrongAnimal.hpp"
 
