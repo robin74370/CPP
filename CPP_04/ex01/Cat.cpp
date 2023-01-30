@@ -6,14 +6,15 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 09:29:16 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/25 18:20:35 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/30 14:11:39 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat(void) : Animal("Cat"), sound("Meows"), brain(new Brain())
+Cat::Cat(void) : Animal("Cat"), sound("Meows")//, brain(new Brain())
 {
+	this->brain = new Brain();
 	std::cout << "Cat default constructor called" << std::endl;
 }
 

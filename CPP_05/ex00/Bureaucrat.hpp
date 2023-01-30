@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:10:57 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/12 17:25:53 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/26 15:21:59 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,7 @@ public:
 
 	class GradeTooHighException : public std::exception
 	{
-		public :
-			GradeTooHighException(void);
-			~GradeTooHighException(void);
+	public :
 			const char* what() const throw()
 			{
 				return "Grade is too high";
@@ -47,9 +45,7 @@ public:
 
 	class GradeTooLowException : public std::exception
 	{
-		public :
-			GradeTooLowException(void);
-			~GradeTooLowException(void);
+	public :
 			const char* what() const throw()
 			{
 				return "Grade is too low";

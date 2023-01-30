@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 17:10:39 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/25 14:48:01 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/26 17:16:14 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int main()
 {
-	MutantStack	st;
+	MutantStack<int>	st;
 }

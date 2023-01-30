@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 16:48:21 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/16 13:44:01 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/30 16:25:22 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ public:
 	~Bureaucrat(void);
 
 	Bureaucrat&	operator=(Bureaucrat const & src);
-	friend std::ostream&	operator<<(std::ostream& o, const Bureaucrat& rhs);
 
 	void	incrGrade(void);
 	void	decrGrade(void);
@@ -64,6 +63,7 @@ private:
 	int	grade;
 
 };
+std::ostream&	operator<<(std::ostream& o, const Bureaucrat& rhs);
 
 
 #endif

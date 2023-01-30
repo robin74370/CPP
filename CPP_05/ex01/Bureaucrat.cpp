@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 16:48:23 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/16 11:56:59 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/30 16:24:41 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,11 +85,11 @@ void	Bureaucrat::signForm(Form & form)
 	try
 	{
 		form.beSigned(*this);
-		std::cout << "This Bureaucrat has signed";
+		std::cout << this->getName() << "signed" << form.getName() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << "this Bureaucrat has not signed because :"
+		std::cerr << "this Bureaucrat has not signed because : "
 		<< e.what() << std::endl;
 	}
 	
@@ -97,7 +97,7 @@ void	Bureaucrat::signForm(Form & form)
 
 std::ostream&	operator<<(std::ostream& o, const Bureaucrat& rhs)
 {
-	o << rhs.getName() << ", Bureaucrat grade" << rhs.getGrade() << std::endl;
+	o << rhs.getName() << ", Bureaucrat, grade : " << rhs.getGrade() << std::endl;
 	
 	return o;
 }

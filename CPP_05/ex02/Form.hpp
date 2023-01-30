@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:47:34 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/16 15:57:56 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/30 17:19:48 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,14 @@ class Form
 {
 public:
 
-	Form(void);
-	Form(const std::string _name, const int _grade_sign,
-		const int _grade_exec);
+	Form(const std::string _name, const int _grade_sign, const int _grade_exec);
 	Form(const Form & rhs);
-	~Form();
+	virtual ~Form();
 	
 	Form&	operator=(const Form& rhs);
 
 	void	beSigned(const Bureaucrat& rhs);
+	virtual void	execute(Bureaucrat const & executor) = 0;
 
 	//getters
 
@@ -64,9 +63,19 @@ public:
 				return "Grade is too low";
 			}
 	};
+	class NotSignedException : public std::exception
+	{
+		public :
+			const char* what() const throw()
+			{
+				return "Form is not signed";
+			}
+	};
 	
 protected:
 
+	Form();
+	const std::string	target;
 	const std::string	name;
 	bool				sign;
 	int	const			grade_sign;

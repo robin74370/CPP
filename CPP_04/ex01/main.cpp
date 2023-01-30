@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 18:49:05 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/25 18:21:37 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/30 14:15:48 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,5 @@ int main()
 	}
 	for (int i = 0; i < 20; i++)
 		delete tab[i];
-	// Dog basic;
-	// {
-	// 	Dog tmp = basic;
-	// }
 	return (0);
 }

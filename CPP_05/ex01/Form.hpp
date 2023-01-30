@@ -6,15 +6,15 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 16:48:52 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/16 13:43:41 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/30 16:25:43 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-class Bureaucrat;
 
 #ifndef FORM_HPP
 # define FORM_HPP
 
+class Bureaucrat;
 //si je met un include dans ce fichier
 //la compilation fais nimp
 
@@ -44,7 +44,6 @@ public:
 
 	//surcharge op <<
 
-	friend std::ostream& operator<<(std::ostream& o, const Form& rhs);
 	
 	class GradeTooHighException : public std::exception
 	{
@@ -70,5 +69,6 @@ private:
 	int	const			grade_sign;
 	int	const			grade_exec;
 };
+std::ostream& operator<<(std::ostream& o, const Form& rhs);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 17:18:53 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/25 14:49:57 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/26 16:53:10 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,18 @@ MutantStack::~MutantStack()
 template <typename T>
 MutantStack<T>& MutantStack<T>::operator=(const MutantStack<T>& rhs)
 {
-	
+}
+
+template <typename T>
+iterator	MutantStack::begin()
+{
+	return ()
+}
+
+template <typename T>
+iterator	MutantStack::end()
+{
+	return ()
 }
 
 #endif

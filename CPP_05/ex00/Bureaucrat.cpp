@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:10:54 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/12 16:40:38 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/26 15:09:20 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,23 +78,6 @@ void	Bureaucrat::decrGrade(void)
 	else
 		throw Bureaucrat::GradeTooLowException();
 }
-
-Bureaucrat::GradeTooHighException::GradeTooHighException(void)
-{
-}
-
-Bureaucrat::GradeTooHighException::~GradeTooHighException(void)
-{
-}
-
-Bureaucrat::GradeTooLowException::GradeTooLowException(void)
-{
-}
-
-Bureaucrat::GradeTooLowException::~GradeTooLowException(void)
-{
-}
-
 
 std::ostream&	operator<<(std::ostream& o, const Bureaucrat& rhs)
 {
