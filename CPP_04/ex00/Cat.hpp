@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 09:29:19 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/24 13:45:31 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/31 14:43:45 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public :
 
 	Cat(void);
 	Cat(Cat const &src);
-	~Cat(void);
+	virtual ~Cat(void);
 
 	Cat	&operator=(Cat const &src);
 	virtual void	makeSound() const;

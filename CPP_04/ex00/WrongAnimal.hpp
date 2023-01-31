@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 15:38:24 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/24 13:45:42 by repinat          ###   ########.fr       */
+/*   Updated: 2023/01/31 14:43:54 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public :
 
 	WrongAnimal(void);
 	WrongAnimal(WrongAnimal const &src);
-	~WrongAnimal(void);
+	 virtual ~WrongAnimal(void);
 
 	WrongAnimal	&operator=(WrongAnimal const &src);
 
