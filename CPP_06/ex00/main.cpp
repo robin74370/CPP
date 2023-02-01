@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:59:34 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/17 15:03:38 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/01 15:35:11 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 
 void	toChar(double val)
 {
-	char x = static_cast<char>(x);
-	
 	//val != val pour comparer nan a lui meme (renvoie toujours false)
 	if (val != val || !isascii(val))
 		std::cout << "Impossible" << std::endl;
