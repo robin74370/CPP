@@ -6,11 +6,10 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:47:26 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/31 13:43:42 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/01 15:02:04 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-class Form;
 
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
@@ -20,6 +19,7 @@ class Form;
 #include <iostream>
 #include <exception>
 
+class Form;
 class Bureaucrat
 {
 public:
@@ -30,7 +30,6 @@ public:
 	~Bureaucrat(void);
 
 	Bureaucrat&	operator=(Bureaucrat const & src);
-	friend std::ostream&	operator<<(std::ostream& o, const Bureaucrat& rhs);
 
 	void	incrGrade(void);
 	void	decrGrade(void);
@@ -67,5 +66,6 @@ private:
 
 };
 
+std::ostream&	operator<<(std::ostream& o, const Bureaucrat& rhs);
 
 #endif

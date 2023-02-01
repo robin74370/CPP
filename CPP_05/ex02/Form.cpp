@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:47:30 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/30 14:57:41 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/01 15:13:06 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,24 @@
 
 //constructeurs
 
-// Form::Form()
-// 	: name("Default"), sign(false), grade_sign(1), grade_exec(1)
-// {
-// 	std::cout << "Form default constructor called" << std::endl;
-// }
+Form::Form()
+	: name("Default"), sign(false), grade_sign(1), grade_exec(1)
+{
+	std::cout << "Form default constructor called" << std::endl;
+}
 
-// Form::Form(const std::string _name, const int _grade_sign, const int _grade_exec)
-// 	: name(_name), sign(false), grade_sign(_grade_sign), grade_exec(_grade_exec)
-// {
-// 	if (_grade_exec < 1 || _grade_sign < 1)
-// 		throw Form::GradeTooHighException();
-// 	else if (_grade_exec > 150 || _grade_sign > 150)
-// 		throw Form::GradeTooLowException();
-// 	std::cout << "Form constrcutor called" << std::endl;
-// }
+Form::Form(const std::string _name, const int _grade_sign, const int _grade_exec, const std::string _target)
+	: name(_name), sign(false), grade_sign(_grade_sign), grade_exec(_grade_exec), target(_target)
+{
+	if (_grade_exec < 1 || _grade_sign < 1)
+		throw Form::GradeTooHighException();
+	else if (_grade_exec > 150 || _grade_sign > 150)
+		throw Form::GradeTooLowException();
+	std::cout << "Form constrcutor called" << std::endl;
+}
 
 Form::Form(const Form & ref)
-	: name(ref.name), sign(ref.sign), grade_exec(ref.grade_exec), grade_sign(ref.grade_sign)
+	: name(ref.name), sign(ref.sign), grade_exec(ref.grade_exec), grade_sign(ref.grade_sign), target(ref.target)
 {
 	std::cout << "Form copy constructor called" << std::endl;
 }
@@ -55,6 +55,11 @@ Form&	Form::operator=(const Form& rhs)
 }
 
 //getters
+
+std::string	Form::getTarget() const
+{
+	return this->target;
+}
 
 std::string	Form::getName() const
 {

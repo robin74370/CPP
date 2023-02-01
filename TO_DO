@@ -8,7 +8,7 @@ CPP_01 : OK
 CPP_02 : OK
 CPP_03 : OK
 CPP_04 : Leak exercice 01
-CPP_05 : Faire un meilleur main pour ex01 et un main pour ex02
+CPP_05 : conditional jump ex02
 CPP_06 : Fini
 CPP_07 : fini, faire un main de test pour ex02
 CPP_08 : faire main de test pour ex01
