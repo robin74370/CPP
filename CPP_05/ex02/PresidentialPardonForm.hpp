@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:49:56 by repinat           #+#    #+#             */
-/*   Updated: 2023/02/01 14:29:57 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 10:21:02 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ public :
 
 	PresidentialPardonForm(const std::string & target);
 	PresidentialPardonForm(const PresidentialPardonForm & rhs);
-	~PresidentialPardonForm();
+	virtual ~PresidentialPardonForm();
 
 	PresidentialPardonForm&	operator=(const PresidentialPardonForm & other);
-	void	execute(Bureaucrat const & executor) const;
+	virtual void	execute(Bureaucrat const & executor) const;
 
 private :
 

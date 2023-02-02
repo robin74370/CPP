@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:49:59 by repinat           #+#    #+#             */
-/*   Updated: 2023/02/01 15:08:29 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 10:19:46 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ RobotomyRequestForm::RobotomyRequestForm(const std::string & _target) : Form("RR
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm & rhs)
 {
+	*this = rhs;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm()
@@ -42,8 +43,7 @@ void	RobotomyRequestForm::execute(Bureaucrat const & executor) const
 	else if (executor.getGrade() >= this->getGradeExec())
 		throw Form::GradeTooLowException();
 	srand(time(0));
-	int number = rand();
-	if (number % 2)
+	if (rand() % 2)
 		std::cout << target << " has been robotomized" << std::endl;
 	else
 		std::cout << "the robotomisation failed" << std::endl;

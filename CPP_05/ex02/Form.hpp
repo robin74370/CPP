@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:47:34 by repinat           #+#    #+#             */
-/*   Updated: 2023/02/01 15:13:12 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 10:29:30 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ public:
 
 	Form(const std::string _name, const int _grade_sign, const int _grade_exec, const std::string _target);
 	Form(const Form & rhs);
-	~Form();
+	virtual ~Form();
 	
 	Form&	operator=(const Form& rhs);
 
 	void	beSigned(const Bureaucrat& rhs);
-	virtual void	execute(Bureaucrat const & executor) const = 0;
 
+	virtual void	execute(Bureaucrat const & executor) const = 0;
 	//getters
 
 	std::string	getTarget() const;
@@ -71,15 +71,18 @@ public:
 				return "Form is not signed";
 			}
 	};
+
+private :
+
+	const std::string	name;
+	bool				sign;
+	int	const			grade_sign;
+	int	const			grade_exec;
 	
 protected:
 
 	Form();
 	const std::string	target;
-	const std::string	name;
-	bool				sign;
-	int	const			grade_sign;
-	int	const			grade_exec;
 };
 
 std::ostream& operator<<(std::ostream& o, const Form& rhs);

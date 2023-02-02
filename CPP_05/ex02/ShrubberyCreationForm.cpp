@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:50:03 by repinat           #+#    #+#             */
-/*   Updated: 2023/02/01 15:08:43 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 10:13:40 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(const std::string & _target) : Form
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm & rhs)
 {
+	*this = rhs;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm()

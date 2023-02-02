@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:50:01 by repinat           #+#    #+#             */
-/*   Updated: 2023/02/01 14:29:53 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 10:20:33 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ public :
 
 	RobotomyRequestForm(const std::string & target);
 	RobotomyRequestForm(const RobotomyRequestForm & rhs);
-	~RobotomyRequestForm();
+	virtual ~RobotomyRequestForm();
 
 	RobotomyRequestForm&	operator=(const RobotomyRequestForm & other);
-	void	execute(Bureaucrat const & executor) const;
+	virtual void	execute(Bureaucrat const & executor) const;
 
 private :
 	

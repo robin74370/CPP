@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:50:06 by repinat           #+#    #+#             */
-/*   Updated: 2023/02/01 14:29:50 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 10:21:17 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ public :
 
 	ShrubberyCreationForm(const std::string & target);
 	ShrubberyCreationForm(const ShrubberyCreationForm & rhs);
-	~ShrubberyCreationForm();
+	virtual ~ShrubberyCreationForm();
 
 	ShrubberyCreationForm&	operator=(const ShrubberyCreationForm & other);
-	void	execute(Bureaucrat const & executor) const;
+	virtual void	execute(Bureaucrat const & executor) const;
 
 private :
 

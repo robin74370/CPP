@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:49:54 by repinat           #+#    #+#             */
-/*   Updated: 2023/02/01 15:08:18 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 10:14:20 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ PresidentialPardonForm::PresidentialPardonForm(const std::string & _target) : Fo
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm & rhs)
 {
+	*this = rhs;
 }
 
 PresidentialPardonForm::~PresidentialPardonForm()
@@ -41,5 +42,5 @@ void	PresidentialPardonForm::execute(Bureaucrat const & executor) const
 		throw Form::NotSignedException();
 	else if (executor.getGrade() >= this->getGradeExec())
 		throw Form::GradeTooLowException();
-	std::cout << target << "was forgiven" << std::endl;
+	std::cout << target << "was forgiven by Zapod Beeblebrox !" << std::endl;
 }
