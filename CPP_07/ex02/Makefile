@@ -1,5 +1,4 @@
 SRCS =		main.cpp\
-			template.tpp\
 
 OBJS =		${SRCS:.cpp=.o}
 

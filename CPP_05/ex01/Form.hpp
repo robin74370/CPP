@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 16:48:52 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/30 16:25:43 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 18:12:03 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,6 @@ public:
 	int		getGradeSign() const;
 	int		getGradeExec() const;
 	bool	getSigned() const;
-
-	//surcharge op <<
-
 	
 	class GradeTooHighException : public std::exception
 	{

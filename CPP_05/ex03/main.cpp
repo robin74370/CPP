@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:47:37 by repinat           #+#    #+#             */
-/*   Updated: 2023/02/02 15:00:30 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 15:29:20 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,8 +124,10 @@ int main(void)
 
 	
 	Intern	Jacques;
+	Form	*test;
 	
-	Jacques.makeForm("PresidentialPardonForm", "bob");
-	
+	test = Jacques.makeForm("PresidentialPardonForm", "bob");
+
+	delete test;
 	return (0);
 }

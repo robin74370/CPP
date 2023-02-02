@@ -6,17 +6,14 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:08:31 by repinat           #+#    #+#             */
-/*   Updated: 2023/02/02 13:32:21 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 16:21:03 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
-#include "Array.tpp"
 
 int main()
 {
 	char	str[] = {'1', '2', '3', '4', '5'};
 	int		tab[] = {1, 2, 3, 4, 5};
-
-	
 }
