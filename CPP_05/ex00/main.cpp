@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 14:45:10 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/26 15:27:21 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 13:58:49 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int main()
 	try
 	{
 		Francis.decrGrade();
+		// Francis.decrGrade();
 		Roger.incrGrade();
 	}
 	

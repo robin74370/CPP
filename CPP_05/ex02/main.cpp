@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:47:37 by repinat           #+#    #+#             */
-/*   Updated: 2023/02/02 10:18:42 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 13:17:34 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,34 +91,34 @@ int main(void)
 
 	
 	RobotomyRequestForm rrf = RobotomyRequestForm("Bob");
-	// ShrubberyCreationForm scf = ShrubberyCreationForm("Bob");
-	// PresidentialPardonForm ppf = PresidentialPardonForm("Bob");
-	// std::cout << rrf << std::endl;
-	// std::cout << scf << std::endl;
-	// std::cout << ppf << std::endl;
-	// Bureaucrat Bob = Bureaucrat("Bob", 1);
-	// Bureaucrat Jim = Bureaucrat("Jim", 42);
-	// Bob.signForm(rrf);
-	// Bob.executeForm(rrf);
-	// std::cout << "----------------------------" << std::endl;
-	// Bob.signForm(scf);
-	// Bob.executeForm(scf);
-	// std::cout << "----------------------------" << std::endl;
-	// Bob.signForm(ppf);
-	// Bob.executeForm(ppf);
-	// std::cout << "----------------------------" << std::endl;
-	// Jim.signForm(rrf);
-	// Jim.executeForm(rrf);
-	// std::cout << "----------------------------" << std::endl;
-	// Jim.signForm(scf);
-	// Jim.executeForm(scf);
-	// std::cout << "----------------------------" << std::endl;
-	// Jim.signForm(ppf);
-	// Jim.executeForm(ppf);
-	// std::cout << "----------------------------" << std::endl;
-	// std::cout << rrf << std::endl;
-	// std::cout << scf << std::endl;
-	// std::cout << ppf << std::endl;
-	// std::cout << "----------------------------" << std::endl;
-	// return (0);
+	ShrubberyCreationForm scf = ShrubberyCreationForm("Bob");
+	PresidentialPardonForm ppf = PresidentialPardonForm("Bob");
+	std::cout << rrf << std::endl;
+	std::cout << scf << std::endl;
+	std::cout << ppf << std::endl;
+	Bureaucrat Bob = Bureaucrat("Bob", 1);
+	Bureaucrat Jim = Bureaucrat("Jim", 42);
+	Bob.signForm(rrf);
+	Bob.executeForm(rrf);
+	std::cout << "----------------------------" << std::endl;
+	Bob.signForm(scf);
+	Bob.executeForm(scf);
+	std::cout << "----------------------------" << std::endl;
+	Bob.signForm(ppf);
+	Bob.executeForm(ppf);
+	std::cout << "----------------------------" << std::endl;
+	Jim.signForm(rrf);
+	Jim.executeForm(rrf);
+	std::cout << "----------------------------" << std::endl;
+	Jim.signForm(scf);
+	Jim.executeForm(scf);
+	std::cout << "----------------------------" << std::endl;
+	Jim.signForm(ppf);
+	Jim.executeForm(ppf);
+	std::cout << "----------------------------" << std::endl;
+	std::cout << rrf << std::endl;
+	std::cout << scf << std::endl;
+	std::cout << ppf << std::endl;
+	std::cout << "----------------------------" << std::endl;
+	return (0);
 }

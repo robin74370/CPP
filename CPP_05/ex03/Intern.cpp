@@ -6,12 +6,11 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 15:23:22 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/31 15:57:16 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 14:58:26 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Intern.hpp"
-
 
 Intern::Intern()
 {
@@ -21,31 +20,36 @@ Intern::~Intern()
 {
 }
 
-Form*	Intern::makeForm(const std::string & form_name,const std::string & target) const
+Form*	Intern::makePPF(std::string target)
 {
-	std::string	FormNames[3] = {
-		"PPF",
-		"RRF",
-		"SCF"
-	};
-	
-	for (int i = 0; FormNames[i] != form_name; i++;)
+	return new PresidentialPardonForm(target);
+}
 
-	Form*	ret = NULL;
-	switch(i)
+Form*	Intern::makeRRF(std::string target)
+{
+	return new RobotomyRequestForm(target);
+}
+
+Form*	Intern::makeSCF(std::string target)
+{
+	return new ShrubberyCreationForm(target);
+}
+
+Form*	Intern::makeForm(const std::string & form_name,const std::string & target)
+{
+	std::string classNames[3] = {"ShrubberyCreationForm", "PresidentialPardonForm", "RobotomyRequestForm" };
+
+	Form* (Intern::*createForm[3])(std::string) = {&Intern::makeSCF, &Intern::makePPF, &Intern::makeRRF};
+
+	for (int i = 0; i < 3; i++)
 	{
-		case 0 :
-			ret = new PresidentialPardonForm(target);
-			break ;
-		case 1 :
-			ret = new RobotomyRequestForm(target);
-			break ;
-		case 2 :
-			ret = new ShrubberyCreationForm(target);
-			break;
-		default : 
-			throw InvalidFormException();
+		if (form_name == classNames[i])
+		{
+			Form *form = (this->*createForm[i])(target);
+			std::cout << "Intern creates " << form_name << std::endl;
+			return form;
+		}
 	}
-	std::cout << "Intern creates " << form_name << std::endl;
-	return ret;
+	std::cout << "Form name not found" << std::endl;
+	return NULL;
 }

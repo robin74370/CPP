@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/31 15:23:19 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/31 15:41:08 by repinat          ###   ########.fr       */
+/*   Created: 2023/02/02 14:40:22 by repinat           #+#    #+#             */
+/*   Updated: 2023/02/02 14:47:07 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,11 @@ public :
 		Intern();
 		~Intern();
 	
-		class InvalidFormException : public std::exceptions
+		Form*	makePPF(std::string target);
+		Form*	makeRRF(std::string target);
+		Form*	makeSCF(std::string target);
+	
+		class InvalidFormException : public std::exception
 		{
 			public :
 			const char* what() const throw()
@@ -33,7 +37,11 @@ public :
 			}
 		};
 		
-		Form* makeForm(const std::string & form_name,const std::string & target) const;
+		Form* makeForm(const std::string & form_name,const std::string & target);
+
+private :
+	Intern(const Intern & other);
+	Intern & operator=(const Intern & other);
 };
 
 #endif

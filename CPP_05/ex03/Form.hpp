@@ -6,15 +6,15 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:47:34 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/30 17:19:48 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 13:15:31 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-class Bureaucrat;
 
 #ifndef FORM_HPP
 # define FORM_HPP
 
+class Bureaucrat;
 //si je met un include dans ce fichier
 //la compilation fais nimp
 
@@ -33,8 +33,8 @@ public:
 	Form&	operator=(const Form& rhs);
 
 	void	beSigned(const Bureaucrat& rhs);
-	virtual void	execute(Bureaucrat const & executor) = 0;
 
+	virtual void	execute(Bureaucrat const & executor) const = 0;
 	//getters
 
 	std::string	getName() const;
@@ -44,7 +44,6 @@ public:
 
 	//surcharge op <<
 
-	friend std::ostream& operator<<(std::ostream& o, const Form& rhs);
 	
 	class GradeTooHighException : public std::exception
 	{
@@ -71,15 +70,20 @@ public:
 				return "Form is not signed";
 			}
 	};
-	
-protected:
 
-	Form();
-	const std::string	target;
+private :
+
 	const std::string	name;
 	bool				sign;
 	int	const			grade_sign;
 	int	const			grade_exec;
+	
+protected:
+
+	Form();
+	// const std::string	target;
 };
+
+std::ostream& operator<<(std::ostream& o, const Form& rhs);
 
 #endif

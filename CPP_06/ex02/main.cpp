@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 15:38:37 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/18 14:13:57 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 13:49:16 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,30 @@ void	identify(Base* p)
 
 void	identify(Base& p)
 {
-	identify(&p);
+	try
+	{
+		(dynamic_cast<A&>(p));
+	}
+	catch (std::exception &e)
+	{
+		std::cout << "Not A class" << std::endl;
+	}
+		try
+	{
+		(dynamic_cast<B&>(p));
+	}
+	catch (std::exception &e)
+	{
+		std::cout << "Not B class" << std::endl;
+	}
+	try
+	{
+		(dynamic_cast<C&>(p));
+	}
+	catch (std::exception &e)
+	{
+		std::cout << "Not C class" << std::endl;
+	}
 }
 
 int main()

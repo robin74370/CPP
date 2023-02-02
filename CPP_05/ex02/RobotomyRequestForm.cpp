@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:49:59 by repinat           #+#    #+#             */
-/*   Updated: 2023/02/02 10:19:46 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 13:16:18 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,14 @@ RobotomyRequestForm::RobotomyRequestForm() : Form()
 {
 }
 
-RobotomyRequestForm::RobotomyRequestForm(const std::string & _target) : Form("RRF", 72, 45, target)
+RobotomyRequestForm::RobotomyRequestForm(const std::string & _target)
+	: Form("RRF", 72, 45), target(_target)
 {
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm & rhs)
+	: Form(rhs), target(rhs.target)
 {
-	*this = rhs;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm()

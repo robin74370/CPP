@@ -6,11 +6,12 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:08:31 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/19 21:55:56 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 13:32:21 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
+#include "Array.tpp"
 
 int main()
 {

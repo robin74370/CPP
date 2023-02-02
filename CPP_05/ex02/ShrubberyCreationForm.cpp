@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:50:03 by repinat           #+#    #+#             */
-/*   Updated: 2023/02/02 10:13:40 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 13:16:52 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,14 @@ ShrubberyCreationForm::ShrubberyCreationForm() : Form()
 {
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const std::string & _target) : Form("SCF", 145, 137, target)
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string & _target)
+    : Form("SCF", 145, 137), target(_target)
 {
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm & rhs)
+    : Form(rhs), target(rhs.target)
 {
-	*this = rhs;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
@@ -46,7 +47,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 		
 	std::ofstream file;
     
-    file.open(this->getTarget() + "_Shrubbery");
+    file.open(target + "_Shrubbery");
     if (file.is_open())
     {
         file	<< "      *\n"

@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:50:01 by repinat           #+#    #+#             */
-/*   Updated: 2023/02/02 10:20:33 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 13:13:53 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ public :
 	virtual void	execute(Bureaucrat const & executor) const;
 
 private :
-	
+
+	const std::string	target;
 	RobotomyRequestForm();
 };
 

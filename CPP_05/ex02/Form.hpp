@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:47:34 by repinat           #+#    #+#             */
-/*   Updated: 2023/02/02 10:29:30 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 13:15:31 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Form
 {
 public:
 
-	Form(const std::string _name, const int _grade_sign, const int _grade_exec, const std::string _target);
+	Form(const std::string _name, const int _grade_sign, const int _grade_exec);
 	Form(const Form & rhs);
 	virtual ~Form();
 	
@@ -37,7 +37,6 @@ public:
 	virtual void	execute(Bureaucrat const & executor) const = 0;
 	//getters
 
-	std::string	getTarget() const;
 	std::string	getName() const;
 	int		getGradeSign() const;
 	int		getGradeExec() const;
@@ -82,7 +81,7 @@ private :
 protected:
 
 	Form();
-	const std::string	target;
+	// const std::string	target;
 };
 
 std::ostream& operator<<(std::ostream& o, const Form& rhs);

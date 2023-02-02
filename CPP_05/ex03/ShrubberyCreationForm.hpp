@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:50:06 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/30 17:41:21 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 13:13:58 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define SHRUBBERYCREATIONFORM_HPP
 
 #include "Form.hpp"
+#include <iostream>
 
 class ShrubberyCreationForm : public Form
 {
@@ -21,15 +22,14 @@ public :
 
 	ShrubberyCreationForm(const std::string & target);
 	ShrubberyCreationForm(const ShrubberyCreationForm & rhs);
-	~ShrubberyCreationForm();
-
-	std::string	getTarget() {return this->target;}
+	virtual ~ShrubberyCreationForm();
 
 	ShrubberyCreationForm&	operator=(const ShrubberyCreationForm & other);
-	void	execute(Bureaucrat const & executor);
+	virtual void	execute(Bureaucrat const & executor) const;
 
 private :
 
+	const std::string	target;
 	ShrubberyCreationForm();
 };
 

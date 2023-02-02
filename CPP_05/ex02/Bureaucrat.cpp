@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:47:21 by repinat           #+#    #+#             */
-/*   Updated: 2023/02/01 15:12:29 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 13:57:07 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Bureaucrat::Bureaucrat(void)
 	std::cout << "Bureaucrat default constructor called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string _name, int _grade)
+Bureaucrat::Bureaucrat(const std::string _name, int _grade)
 	: name(_name)
 {
 	if (_grade < 1)
@@ -31,30 +31,30 @@ Bureaucrat::Bureaucrat(std::string _name, int _grade)
 	std::cout << "Bureaucrat constructor called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat const & src)
-{
-	std::cout << "Bureaucrat copy constructor called" << std::endl;	
-	*this = src;
+// Bureaucrat::Bureaucrat(Bureaucrat const & src)
+// {
+// 	std::cout << "Bureaucrat copy constructor called" << std::endl;	
+// 	*this = src;
 
-	return ;
-}
+// 	return ;
+// }
 
 Bureaucrat::~Bureaucrat(void)
 {
 	std::cout << "Bureaucrat destructor called" << std::endl;
 }
 
-Bureaucrat	&Bureaucrat::operator=(Bureaucrat const & src)
-{
-	if (this != &src)
-	{
-		this->name = src.name;
-		this->grade = src.grade;
-	}	
-	return (*this);
-}
+// Bureaucrat	&Bureaucrat::operator=(Bureaucrat const & src)
+// {
+// 	if (this != &src)
+// 	{
+// 		this->name = src.name;
+// 		this->grade = src.grade;
+// 	}	
+// 	return (*this);
+// }
 
-std::string	Bureaucrat::getName(void) const
+const std::string	Bureaucrat::getName(void) const
 {
 	return (this->name);
 }

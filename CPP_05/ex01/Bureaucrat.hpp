@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 16:48:21 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/30 16:25:22 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 13:56:07 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Bureaucrat
 public:
 	
 	Bureaucrat(void);
-	Bureaucrat(std::string _name, int grade);
+	Bureaucrat(const std::string _name, int grade);
 	Bureaucrat(Bureaucrat const & src);
 	~Bureaucrat(void);
 
@@ -34,7 +34,7 @@ public:
 	void	incrGrade(void);
 	void	decrGrade(void);
 
-	std::string	getName(void) const;
+	const std::string	getName(void) const;
 	int	getGrade(void) const;
 
 	void	signForm(Form & form);
@@ -59,7 +59,7 @@ public:
 
 private:
 
-	std::string	name;
+	const std::string	name;
 	int	grade;
 
 };

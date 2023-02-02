@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:49:56 by repinat           #+#    #+#             */
-/*   Updated: 2023/02/02 10:21:02 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 13:13:46 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ public :
 
 private :
 
+	const std::string	target;
 	PresidentialPardonForm();
 };
 

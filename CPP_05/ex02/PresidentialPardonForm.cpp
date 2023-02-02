@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:49:54 by repinat           #+#    #+#             */
-/*   Updated: 2023/02/02 10:14:20 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/02 13:16:29 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,14 @@ PresidentialPardonForm::PresidentialPardonForm() : Form()
 {
 }
 
-PresidentialPardonForm::PresidentialPardonForm(const std::string & _target) : Form("PPF", 25, 5, _target)
+PresidentialPardonForm::PresidentialPardonForm(const std::string & _target)
+	: Form("PPF", 25, 5), target(_target)
 {
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm & rhs)
+	: Form(rhs), target(rhs.target)
 {
-	*this = rhs;
 }
 
 PresidentialPardonForm::~PresidentialPardonForm()
