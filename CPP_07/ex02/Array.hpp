@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:08:34 by repinat           #+#    #+#             */
-/*   Updated: 2023/02/02 16:43:03 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/03 13:43:19 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Array
 public :
 
 	Array() : size(0), array(new T[0]) {}
-	Array(unsigned int n) : array(new T[n]) {}
+	Array(unsigned int n) : array(new T[n]), size(n) {}
 	Array(const Array& other)
 	{
 		delete this->array;

@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:59:14 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/23 19:56:32 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/08 10:51:01 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,20 @@ void	print(int i)
 
 int main()
 {
-	//appel au constrcuteur pour initialiser
+	//50 = size, 100 = elements aux 50 elements du vector
+	
 	std::vector<int> myVector(50, 100);
-	myVector[3] = 101;
+	
+	myVector[3] = 42;
 
 	try
 	{
-		std::cout << *easyfind(myVector, 101).base() << std::endl;
+		std::cout << *easyfind(myVector, 42).base() << std::endl;
 		std::cout << *easyfind(myVector, 90).base() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cerr << e.what() << std::endl;
 	}
 	
 	return 0;

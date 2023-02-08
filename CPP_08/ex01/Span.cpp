@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 11:05:35 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/24 16:52:28 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/08 14:29:23 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,10 @@ void	Span::addNumber(std::vector<int>::const_iterator it1, std::vector<int>::con
 {
 	while (it1 < it2)
 	{
-		// if (this->V.size() == this->N)
-		// 	throw //une exception;
-		this->V.push_back(*it1);
-		it1++;
+		if (V.size() == N)
+			throw ContainerIsFull();
+		V.push_back(*it1);
+		++it1;
 	}
 }
 

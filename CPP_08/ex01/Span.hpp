@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 11:05:37 by repinat           #+#    #+#             */
-/*   Updated: 2023/01/24 16:48:32 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/08 11:24:31 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <vector>
 #include <algorithm>
+#include <iostream>
 #include <exception>
 
 class Span

@@ -6,7 +6,7 @@
 /*   By: repinat <repinat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 15:06:44 by repinat           #+#    #+#             */
-/*   Updated: 2023/02/02 15:31:16 by repinat          ###   ########.fr       */
+/*   Updated: 2023/02/03 10:33:17 by repinat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,13 @@ int main()
 	Data	*deserialized;
 	
 	_data.data = 42;
+	_data.c = 'f';
 	serialized = serialize(&_data);
 	deserialized = deserialize(serialized);
 
 	if (deserialized->data = 42)
-		std::cout << "Data: " << deserialized->data << " - Success !" << std::endl;
+		std::cout << "int: " << deserialized->data << ", c: " << deserialized->c
+		<< " --- Success !" << std::endl;
 	else
 		std::cout << "Error !" << std::endl;
 		
